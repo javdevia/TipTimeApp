@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         val stringInTextField = binding.etCost.text.toString()
         val totalCost = stringInTextField.toDoubleOrNull()
 
-        if (totalCost == null ) {
+        if (totalCost == null ||totalCost == 0.0) {
             displayTip(0.0)
             return
         }
