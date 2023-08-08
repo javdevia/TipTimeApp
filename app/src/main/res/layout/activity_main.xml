@@ -1,154 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/tip_time"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="16dp"
+        tools:context=".MainActivity">
 
-
-    <ImageView
-        android:id="@+id/ivCost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
-        android:src="@drawable/ic_store"
-        app:layout_constraintBottom_toBottomOf="@id/tilCost"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tilCost" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilCost"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/ivCost"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etCost"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/tip_time"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/ivCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_store"
+            app:layout_constraintBottom_toBottomOf="@id/tilCost"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tilCost" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilCost"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:hint="@string/cost_of_service"
-            android:inputType="numberDecimal"
-            android:textSize="24sp" />
+            app:layout_constraintStart_toEndOf="@+id/ivCost"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/cost_of_service"
+                android:inputType="numberDecimal"
+                android:textSize="24sp" />
 
-    <ImageView
-        android:id="@+id/ivServiceQuestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
-        android:src="@drawable/ic_service"
-        app:layout_constraintBottom_toBottomOf="@id/tvServiceQuestion"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvServiceQuestion" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tvServiceQuestion"
-        style="@style/Widget.TipTime.TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/how_was_the_service"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@id/ivServiceQuestion"
-        app:layout_constraintTop_toBottomOf="@id/tilCost" />
-
-    <RadioGroup
-        android:id="@+id/rgTipOptions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:checkedButton="@id/rb20"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="@id/tilCost"
-        app:layout_constraintTop_toBottomOf="@id/tvServiceQuestion">
-
-        <RadioButton
-            android:id="@+id/rb20"
+        <ImageView
+            android:id="@+id/ivServiceQuestion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/amazing_20" />
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_service"
+            app:layout_constraintBottom_toBottomOf="@id/tvServiceQuestion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvServiceQuestion" />
 
-        <RadioButton
-            android:id="@+id/rb18"
+        <TextView
+            android:id="@+id/tvServiceQuestion"
+            style="@style/Widget.TipTime.TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/good_18" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/how_was_the_service"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/ivServiceQuestion"
+            app:layout_constraintTop_toBottomOf="@id/tilCost" />
 
-        <RadioButton
-            android:id="@+id/rb15"
+        <RadioGroup
+            android:id="@+id/rgTipOptions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/okay_15" />
+            android:layout_marginBottom="16dp"
+            android:checkedButton="@id/rb20"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@id/tilCost"
+            app:layout_constraintTop_toBottomOf="@id/tvServiceQuestion">
 
-    </RadioGroup>
+            <RadioButton
+                android:id="@+id/rb20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/amazing_20" />
 
-    <ImageView
-        android:id="@+id/ivRoundUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
-        android:src="@drawable/ic_round_up"
-        app:layout_constraintBottom_toBottomOf="@id/swtRoundUp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/swtRoundUp" />
+            <RadioButton
+                android:id="@+id/rb18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/good_18" />
 
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/swtRoundUp"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="8dp"
+            <RadioButton
+                android:id="@+id/rb15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/okay_15" />
 
-        android:checked="true"
-        android:text="@string/round_up_tip"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ivRoundUp"
-        app:layout_constraintTop_toBottomOf="@id/rgTipOptions"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </RadioGroup>
 
-    <Button
-        android:id="@+id/btnCalculate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="@string/calculate"
-        android:textAllCaps="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/swtRoundUp" />
+        <ImageView
+            android:id="@+id/ivRoundUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            android:src="@drawable/ic_round_up"
+            app:layout_constraintBottom_toBottomOf="@id/swtRoundUp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/swtRoundUp" />
 
-    <TextView
-        android:id="@+id/tvResult"
-        style="@style/Widget.TipTime.TextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textSize="24sp"
-        android:layout_marginEnd="8dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnCalculate"
-        tools:text="Your result" />
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/swtRoundUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
 
+            android:checked="true"
+            android:text="@string/round_up_tip"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivRoundUp"
+            app:layout_constraintTop_toBottomOf="@id/rgTipOptions"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/calculate"
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/swtRoundUp" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            style="@style/Widget.TipTime.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnCalculate"
+            tools:text="Your result" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
